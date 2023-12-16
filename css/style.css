@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding-top: 100px;
 }
 
 img {
@@ -17,14 +17,14 @@ img {
     height: auto;
 }
 
-/* Button */
+/* 1 */
 
 .button_div{
     width: 580px;
-    height: 180px;
+    height: 250px;
     background-color: #dda0dd;
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: center;
 }
 
@@ -37,13 +37,13 @@ img {
     width: 375px;
     border: none;
     border-radius: 24px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 1), inset 3px 3px 4px rgba(255, 255, 255, 0.7);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 1), inset 3px 3px 4px rgba(255, 255, 255, 0.9);
     /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 1); */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .raised_button:active {
-    box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 1), inset -3px -3px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 1), inset -3px -3px 3px rgba(255, 255, 255, 0.6);
     /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
@@ -53,3 +53,34 @@ img {
 ასე ბევრად უკეთესი ეფექტია ჩემი აზრით.
 
 ტექსტი რჩება თითქოს და ფონი ჩადის.*/
+
+/* 2 */
+
+.card_div_outer{
+    width: 580px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.card_div_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 38px;
+    border-radius: 25px;
+}
+.card_div_inner:hover{
+    transition: box-shadow 1s;
+    box-shadow: 10px 0 15px rgba(64, 192, 64, 0.5),
+    0 10px 10px rgba(64, 192, 64, 0.5),
+    -10px 0 10px rgba(64, 192, 64, 0.5),
+    0 -10px 10px rgba(64, 192, 64, 0.5);
+}
+.card_div_inner:hover :first-child{
+    transition: border-radius 1s;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
