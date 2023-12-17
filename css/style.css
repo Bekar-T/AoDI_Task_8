@@ -9,7 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 img {
@@ -92,7 +93,7 @@ img {
 
 .text_div {
     width: 100%;
-    height: 580px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +133,7 @@ img {
     position: absolute;
     background-image: url("../images/spin.png");
     clip-path: circle(37% at 50% 50%);
-    animation: spin 2s infinite linear;
+    animation: spin 5s infinite linear;
 }
 
 .circle_span {
@@ -224,10 +225,9 @@ nav ul li a:hover {
 .loading_bar::before {
     content: "";
     position: absolute;
-    inset: 0 90% 0 0;
+    inset: 0 95% 0 0;
     border-radius: inherit;
-    background: white;
-    animation: load 5s linear infinite;
+    animation: load 3s linear forwards;
 }
 
 @keyframes load {
