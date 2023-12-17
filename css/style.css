@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 580px;
     width: 100%;
     margin: auto;
     display: flex;
@@ -20,7 +20,7 @@ img {
 /* 1 */
 
 .button_div {
-    width: 580px;
+    width: 100%;
     height: 250px;
     background-color: #dda0dd;
     display: flex;
@@ -57,7 +57,7 @@ img {
 /* 2 */
 
 .card_div_outer {
-    width: 580px;
+    width: 100%;
     background: white;
     display: flex;
     align-items: center;
@@ -91,13 +91,13 @@ img {
 /* 3 */
 
 .text_div {
-    width: 580px;
+    width: 100%;
     height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
-    border-top: 2px solid black;
+    border-top: 5px solid black;
     font-size: 140px;
     letter-spacing: 20px;
     color: red;
@@ -110,13 +110,14 @@ img {
     50% {
         text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1);
     }
-    100%{}
+
+    100% {}
 }
 
 /* 4 */
 
 .spinner_div {
-    width: 580px;
+    width: 100%;
     height: 580px;
     display: flex;
     justify-content: center;
@@ -124,15 +125,17 @@ img {
     background-color: black;
     position: relative;
 }
-.circle{
-    width: 580px;
+
+.circle {
+    width: 100%;
     height: 580px;
     position: absolute;
     background-image: url("../images/spin.png");
     clip-path: circle(37% at 50% 50%);
     animation: spin 2s infinite linear;
 }
-.circle_span{
+
+.circle_span {
     font-size: 80px;
     color: white;
     top: 50%;
@@ -140,33 +143,35 @@ img {
     z-index: 1;
 }
 
-.circle:hover{
+.circle:hover {
     animation-play-state: paused;
 }
 
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 /* სამ ფერიანი არ არის მაგრამ სხვა ყველაფერს აკმაყოფილებს */
 
 /* 5 */
 
-nav{
+nav {
     height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     background-color: white;
 }
-nav ul{
+
+nav ul {
     width: 100%;
     height: 45px;
     display: flex;
@@ -175,16 +180,64 @@ nav ul{
     column-gap: 40px;
     background-color: #056462;
 }
-nav img{
-    width: 580px;
+
+nav img {
+    width: 100%;
 }
-nav ul li a{
+
+nav ul li a {
     font-size: 30px;
     font-family: serif;
     color: white;
     text-shadow: 2px 2px 2px black;
     transition: text-shadow 1s;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     text-shadow: 0 0 15px magenta, 0 0 15px magenta, 0 0 15px magenta;
+}
+
+/* 6 */
+
+.loading_div {
+    height: 250px;
+    width: 100%;
+    border-top: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.loading_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+    color: red;
+    border: 2px solid black;
+    position: relative;
+}
+
+.loading_bar::before {
+    content: "";
+    position: absolute;
+    inset: 0 90% 0 0;
+    border-radius: inherit;
+    background: white;
+    animation: load 5s linear infinite;
+}
+
+@keyframes load {
+    100% {
+        inset: 0;
+        background: red;
+    }
+}
+
+.load_span {
+    color: black;
+    z-index: 1;
 }
